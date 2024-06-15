@@ -20,3 +20,5 @@ alias ch2 'cd /home/ubuntu/gameDev/cppGame/chapter2'
 alias cpdot 'cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gdbinit ~/dotFiles/'
 set showtabline=2
 alias clear 'clear -x'
+alias tcshrc 'vim ~/.tcshrc'
+xset r off
