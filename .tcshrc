@@ -1,6 +1,5 @@
 set autolist
 set noauto
-#set prompt = '%~%# '
 set prompt = '%{\033[0;32m%}%~%{\033[0m%} '
 setenv EDITOR vim
 setenv VISUAL vim
@@ -13,7 +12,9 @@ set histfile = ~/.tcsh_history
 set autocorrect
 set complete = enhance
 alias setTitle 'printf "\033]0;%s\007" "$*:q"'
-echo 'setenv SHELL /usr/bin/tcsh' >> ~/.tcshrc
-
+alias ls 'ls --color=auto'
+alias stcsh 'source ~/.tcshrc'
 setenv SHELL /usr/bin/tcsh
-setenv SHELL /usr/bin/tcsh
+alias ch1 'cd /home/ubuntu/gameDev/cppGame/chapter1'
+alias ch2 'cd /home/ubuntu/gameDev/cppGame/chapter2'
+alias cpdot 'cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotFiles/'
