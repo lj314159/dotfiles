@@ -18,3 +18,4 @@ setenv SHELL /usr/bin/tcsh
 alias ch1 'cd /home/ubuntu/gameDev/cppGame/chapter1'
 alias ch2 'cd /home/ubuntu/gameDev/cppGame/chapter2'
 alias cpdot 'cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotFiles/'
+set showtabline=2
