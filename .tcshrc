@@ -1,0 +1,19 @@
+set autolist
+set noauto
+#set prompt = '%~%# '
+set prompt = '%{\033[0;32m%}%~%{\033[0m%} '
+setenv EDITOR vim
+setenv VISUAL vim
+setenv PAGER less
+setenv CLICOLOR 1
+setenv LSCOLORS ExFxBxDxCxegedabagacad
+set history = 1000
+set savehist = (1000 merge)
+set histfile = ~/.tcsh_history
+set autocorrect
+set complete = enhance
+alias setTitle 'printf "\033]0;%s\007" "$*:q"'
+echo 'setenv SHELL /usr/bin/tcsh' >> ~/.tcshrc
+
+setenv SHELL /usr/bin/tcsh
+setenv SHELL /usr/bin/tcsh
