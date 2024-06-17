@@ -120,5 +120,5 @@ fi
 #set_title() {
 #    echo -ne "\033]0;$1\007"
 #}
-cd /home/ubuntu
+#cd /home/ubuntu
 exec tcsh
