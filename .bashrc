@@ -12,7 +12,7 @@ if ! shopt -oq posix; then
     fi
 fi
 #prompt
-PS1='\[\033[0;32m\]\w\[\033[0m\] '
+PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 #history
 HISTSIZE=1000
 alias setTitle='printf "\033]0;%s\007" "$*"'
