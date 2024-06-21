@@ -6,9 +6,11 @@ set complete = enhance
 alias setTitle 'printf "\033]0;%s\007" "$*:q"'
 alias ls 'ls --color=auto'
 alias stcsh 'source ~/.tcshrc'
-setenv SHELL /usr/bin/tcsh
+#setenv SHELL /usr/bin/tcsh
 alias ch1 'cd /home/ubuntu/cppGame/chapter1'
 alias ch2 'cd /home/ubuntu/cppGame/chapter2'
 alias cpdot 'cp ~/.tcshrc ~/.bashrc ~/.vimrc  ~/dotfiles/'
 alias clear 'clear -x'
 alias tcshrc 'vim ~/.tcshrc'
+alias setTitle='printf "\033]0;%s\007" "$*"'
+
