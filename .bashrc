@@ -22,6 +22,9 @@ alias clear='clear -x'
 PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 #history
 HISTSIZE=1000
+#title
 alias setTitle='printf "\033]0;%s\007" "$*"'
 #source bashrc
 alias sbr='source ~/.bashrc'
+#copy dot files
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
