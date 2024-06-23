@@ -28,3 +28,5 @@ alias setTitle='printf "\033]0;%s\007" "$*"'
 alias sbr='source ~/.bashrc'
 #copy dot files
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
+#edit bashrc
+alias bashrc='vim ~/.bashrc'
