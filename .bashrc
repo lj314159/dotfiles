@@ -14,6 +14,8 @@ fi
 ####navigation##########################################
 alias ch1='cd /home/ubuntu/cppGame/chapter1'
 alias ch2='cd /home/ubuntu/cppGame/chapter2'
+alias ch3='cd /home/ubuntu/cppGame/chapter3'
+alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
 alias dotFiles='cd ~/dotfiles/'
 ####random##############################################
@@ -30,3 +32,5 @@ alias sbr='source ~/.bashrc'
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
 #edit bashrc
 alias bashrc='vim ~/.bashrc'
+
+
