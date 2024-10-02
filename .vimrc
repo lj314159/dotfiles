@@ -5,5 +5,9 @@ set number
 set noswapfile
 set noerrorbells
 set visualbell
-set t_vb=
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+nnoremap <F7> :w<CR>
 
