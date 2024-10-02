@@ -9,5 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
+set smartindent
+set guioptions-=T
 nnoremap <F7> :w<CR>
 
