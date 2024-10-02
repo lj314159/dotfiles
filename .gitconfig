@@ -1,0 +1,6 @@
+[alias]
+  s = status -s
+  pretty = log --author='my name' --pretty=online --no-merges
+  pod = pull origin develop
+[core]
+  editor = vim
