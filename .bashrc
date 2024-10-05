@@ -20,7 +20,7 @@ alias ch5='cd /home/ubuntu/cppGame/chapter5'
 alias dotFiles='cd ~/dotfiles/'
 alias curopengl='cd /home/ubuntu/opengl/texture'
 ####random##############################################
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/dotfiles/'
 alias clear='clear -x'
 alias cp='cp -r'
 alias rm='rm -rf'

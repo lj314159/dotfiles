@@ -11,5 +11,6 @@ set expandtab
 set softtabstop=4
 set smartindent
 set guioptions-=T
+set viminfo=
 nnoremap <F7> :w<CR>
 
