@@ -17,9 +17,10 @@ alias ch2='cd /home/ubuntu/cppGame/chapter2'
 alias ch3='cd /home/ubuntu/cppGame/chapter3'
 alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
 alias dotFiles='cd ~/dotfiles/'
+alias curopengl='cd /home/ubuntu/opengl/texture'
 ####random##############################################
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
 alias clear='clear -x'
 alias cp='cp -r'
 alias rm='rm -rf'
@@ -51,6 +52,7 @@ py_shebang() {
     echo "File not found: $file"
   fi
 }
+alias gvimt='gvim --remote-tab-silent'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ubuntu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
