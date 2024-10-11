@@ -71,7 +71,7 @@ endfunction
 " tab lines
 function! TabLines(start, end)
     execute a:start . "," . a:end . "normal >>"
-end function
+endfunction
 " untab lines
 function! UnTabLines(start, end)
     execute a:start . "," . a:end . "normal <<"

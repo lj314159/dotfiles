@@ -18,7 +18,7 @@ alias ch3='cd /home/ubuntu/cppGame/chapter3'
 alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
 alias dotFiles='cd ~/dotfiles/'
-alias curopengl='cd /home/ubuntu/opengl/texture'
+alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
 ####random##############################################
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/dotfiles/'
 alias clear='clear -x'
@@ -67,4 +67,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
