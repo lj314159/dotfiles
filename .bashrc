@@ -42,6 +42,8 @@ alias vimrc='vim ~/.vimrc'
 alias source2make='/home/ubuntu/cppGame/source2make.sh'
 #sdl2
 alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
+#xdg-open
+alias view='xdg-open'
 #python shebang
 py_shebang() {
   file="$1"

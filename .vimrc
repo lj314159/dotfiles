@@ -7,7 +7,7 @@ set noerrorbells
 set visualbell
 set tabstop=4
 set shiftwidth=4
-set expandtab
+"set expandtab
 set softtabstop=4
 set smartindent
 set guioptions-=T
