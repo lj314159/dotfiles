@@ -1,3 +1,29 @@
+set number
+set nocompatible
+filetype on
+syntax on
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set noswapfile
+set scrolloff=3
+set statusline=%F
+set wrap
+set autoindent
+set viminfo=
+set nobackup
+set nowritebackup
+set visualbell
+set softtabstop=4
+set smartindent
+set guioptions-=T
+set notitle
+set mouse=a
+set clipboard=unnamedplus
+nnoremap <F7> :w<CR>
+nnoremap <F6> :q<CR>
+
+
 set nobackup
 set nowritebackup
 set hlsearch
