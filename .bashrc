@@ -28,6 +28,8 @@ alias rm='rm -rf'
 PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 #history
 HISTSIZE=1000
+#scroll rate
+xset r rate 350 40
 #title
 alias setTitle='printf "\033]0;%s\007" "$*"'
 #source bashrc

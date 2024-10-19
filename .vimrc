@@ -14,6 +14,7 @@ set viminfo=
 set nobackup
 set nowritebackup
 set visualbell
+set t_vb=
 set softtabstop=4
 set smartindent
 set guioptions-=T
