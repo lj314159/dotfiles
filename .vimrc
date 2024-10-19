@@ -23,8 +23,6 @@ set mouse=a
 set clipboard=unnamedplus
 nnoremap <F7> :w<CR>
 nnoremap <F6> :q<CR>
-
-
 set nobackup
 set nowritebackup
 set hlsearch
