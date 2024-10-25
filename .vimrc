@@ -2,8 +2,8 @@ set number
 set nocompatible
 filetype on
 syntax on
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set noswapfile
 set scrolloff=3
@@ -101,3 +101,13 @@ endfunction
 function! UnTabLines(start, end)
     execute a:start . "," . a:end . "normal <<"
 endfunction
+" configure makefiles
+function! SetMakefileSettings()
+    setlocal noexpandtab    " Use actual tabs instead of spaces
+    setlocal tabstop=8      " Set tab width to 8 spaces
+    setlocal shiftwidth=8   " Set shift width to 8 spaces
+    echo "Makefile settings applied"
+endfunction
+
+" Command to call the function manually
+command! MakefileSettings call SetMakefileSettings()

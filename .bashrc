@@ -46,6 +46,10 @@ alias source2make='/home/ubuntu/cppGame/source2make.sh'
 alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
 #xdg-open
 alias view='xdg-open'
+#clang format
+clangFormat() {
+    clang-format --style=file:$HOME/.clang-format "$@"
+}
 #python shebang
 py_shebang() {
   file="$1"
@@ -57,6 +61,7 @@ py_shebang() {
   fi
 }
 alias gvimt='gvim --remote-tab-silent'
+alias tree2='tree -L 2 -f -P "*"'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ubuntu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
