@@ -5,6 +5,7 @@ syntax on
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set showtabline=2
 set noswapfile
 set scrolloff=3
 set statusline=%F
