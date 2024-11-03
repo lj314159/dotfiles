@@ -20,7 +20,7 @@ alias ch5='cd /home/ubuntu/cppGame/chapter5'
 alias dotFiles='cd ~/dotfiles/'
 alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
 ####random##############################################
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/dotfiles/'
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/dotfiles/'
 alias clear='clear -x'
 alias cp='cp -r'
 alias rm='rm -rf'
@@ -30,12 +30,12 @@ PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 HISTSIZE=1000
 #scroll rate
 xset r rate 350 40
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 #title
 alias setTitle='printf "\033]0;%s\007" "$*"'
 #source bashrc
 alias sbr='source ~/.bashrc'
-#copy dot files
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/dotfiles/'
 #edit bashrc
 alias bashrc='vim ~/.bashrc'
 #edit vimrc
