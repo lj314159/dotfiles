@@ -1,9 +1,8 @@
-####add color to commands###############################
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-####auto completion#####################################
+# ------------------------------------------------
+# Environment Customization
+# ------------------------------------------------
+
+# Auto Completion
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
         . /usr/share/bash-completion/bash_completion
@@ -11,7 +10,74 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
-####navigation##########################################
+
+# Prompt
+PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
+
+# Scroll Rate
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+
+
+# X11 Scroll Rate
+xset r rate 250 50
+
+# Scroll Back History
+HISTSIZE=1000
+
+# Terminal Bell Off
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
+
+# Source Bashrc
+alias sbr='source ~/.bashrc'
+
+
+
+
+
+# ------------------------------------------------
+# Environment Variables
+# ------------------------------------------------
+
+
+
+
+
+# ------------------------------------------------
+# Aliases
+# ------------------------------------------------
+
+# Overwrite Commands / Command Shortcuts
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias clear='clear -x'
+alias cp='cp -r'
+alias rm='rm -rf'
+alias view='xdg-open'
+alias gvimt='gvim --remote-tab-silent'
+
+# Edit Dotfiles
+alias bashrc='vim ~/.bashrc'
+alias vimrc='vim ~/.vimrc'
+alias gitconfig='vim ~/.gitconfig'
+alias gdbinit='vim ~/.gdbinit'
+alias dircolors='vim ~/.dircolors'
+alias tmuxconf='vim ~/.tmux.conf'
+alias clangformat='vim ~/.clang-format'
+
+# Custom Aliases
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/dotfiles/'
+alias tree2='tree -L 2 -f -P "*"'
+
+
+
+
+
+# ------------------------------------------------
+# Navigation
+# ------------------------------------------------
+
+# Game Chapters
 alias ch1='cd /home/ubuntu/cppGame/chapter1'
 alias ch2='cd /home/ubuntu/cppGame/chapter2'
 alias ch3='cd /home/ubuntu/cppGame/chapter3'
@@ -19,39 +85,23 @@ alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
 alias dotFiles='cd ~/dotfiles/'
 alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
-####random##############################################
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/dotfiles/'
-alias clear='clear -x'
-alias cp='cp -r'
-alias rm='rm -rf'
-#prompt
-PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
-#history
-HISTSIZE=1000
-#scroll rate
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
-gsettings set org.gnome.desktop.peripherals.keyboard delay 250
-gsettings set org.gnome.desktop.wm.preferences audible-bell false
-xset r rate 250 50
-#title
-alias setTitle='printf "\033]0;%s\007" "$*"'
-#source bashrc
-alias sbr='source ~/.bashrc'
-#edit bashrc
-alias bashrc='vim ~/.bashrc'
-#edit vimrc
-alias vimrc='vim ~/.vimrc'
-#source2make
-alias source2make='/home/ubuntu/cppGame/source2make.sh'
-#sdl2
-alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
-#xdg-open
-alias view='xdg-open'
-#clang format
+# Root Of Repo
+alias cdRoot='cd $(git rev-parse --show-toplevel)'
+
+
+
+
+
+# ------------------------------------------------
+# Functions
+# ------------------------------------------------
+
+# Clang Format
 clangFormat() {
-    clang-format --style=file:$HOME/.clang-format "$@"
+    clang-format --style=file:"$HOME"/.clang-format "$@"
 }
-#python shebang
+
+# Python Shebang
 py_shebang() {
   file="$1"
   if [ -f "$file" ]; then
@@ -61,10 +111,26 @@ py_shebang() {
     echo "File not found: $file"
   fi
 }
-alias gvimt='gvim --remote-tab-silent'
-alias tree2='tree -L 2 -f -P "*"'
-# cd to git root
-alias cdRoot='cd $(git rev-parse --show-toplevel)'
+
+
+
+
+
+# ------------------------------------------------
+# Shell Scripts / Python Scripts
+# ------------------------------------------------
+
+alias source2make='/home/ubuntu/cppGame/source2make.sh'
+alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
+
+
+
+
+
+# ------------------------------------------------
+# Conda
+# ------------------------------------------------
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ubuntu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
