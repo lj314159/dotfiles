@@ -1,7 +1,7 @@
 set number
 set nocompatible
 filetype on
-syntax on
+syntax off
 set shiftwidth=2
 set tabstop=2
 set expandtab
@@ -14,7 +14,6 @@ set autoindent
 set viminfo=
 set nobackup
 set nowritebackup
-set visualbell
 set t_vb=
 set softtabstop=4
 set smartindent
@@ -30,7 +29,6 @@ set hlsearch
 set number
 set noswapfile
 set noerrorbells
-set visualbell
 set tabstop=4
 set shiftwidth=4
 "set expandtab
@@ -112,3 +110,10 @@ endfunction
 
 " Command to call the function manually
 command! MakefileSettings call SetMakefileSettings()
+
+" enable ctags
+function! SetTags()
+    set tags=./tags;,tags
+endfunction
+command! SetTags call SetTags()
+

@@ -29,9 +29,10 @@ PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 #history
 HISTSIZE=1000
 #scroll rate
-xset r rate 350 40
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
 gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
+xset r rate 250 50
 #title
 alias setTitle='printf "\033]0;%s\007" "$*"'
 #source bashrc
@@ -62,6 +63,8 @@ py_shebang() {
 }
 alias gvimt='gvim --remote-tab-silent'
 alias tree2='tree -L 2 -f -P "*"'
+# cd to git root
+alias cdRoot='cd $(git rev-parse --show-toplevel)'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ubuntu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
