@@ -64,6 +64,7 @@ alias gvimt='gvim --remote-tab-silent'
 alias sau='sudo apt update'
 alias pip='sudo pip3'
 alias tmuxkill='tmux kill-session'
+alias histview='history | less'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
@@ -75,7 +76,7 @@ alias tmuxconf='vim ~/.tmux.conf'
 alias clangformat='vim ~/.clang-format'
 
 # Custom Aliases
-alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/dotfiles/'
+alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
 alias tree2='tree -L 2 -f -P "*"'
 
 
@@ -98,7 +99,7 @@ alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
 alias cdRoot='cd $(git rev-parse --show-toplevel)'
 
 # Dotfiles Directory
-alias dotFiles='cd ~/dotfiles/'
+alias dotFiles='cd ~/.dotfiles/'
 
 
 
