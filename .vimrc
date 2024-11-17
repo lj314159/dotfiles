@@ -37,6 +37,8 @@ set wrap
 command! Svr source ~/.vimrc
 nnoremap <F6> :q<CR>
 nnoremap <F7> :w<CR>
+vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
+nnoremap <Leader>Y :.w !xsel --clipboard --input<CR><CR>
 
 "------------------------------------------------
 " Functions
