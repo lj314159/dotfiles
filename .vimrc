@@ -5,8 +5,10 @@
 filetype on
 set clipboard=unnamedplus
 set guioptions-=T
+set hlsearch
 set mouse=a
 set nobackup
+set noerrorbells visualbell t_vb=
 set noswapfile
 set notitle
 set nowritebackup
@@ -14,9 +16,7 @@ set number
 set scrolloff=2
 set showtabline=2
 set statusline=%F
-set noerrorbells visualbell t_vb=
 syntax off
-set hlsearch
 
 "------------------------------------------------
 " Autocomplete Settings
