@@ -3,3 +3,4 @@
 [alias]
 s = status -s
 pretty = log --author='Layne Jones' --pretty=oneline --no-merges
+pom = pull origin main
