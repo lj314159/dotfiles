@@ -1,61 +1,62 @@
-set number
-set nocompatible
+"------------------------------------------------
+" Environment Settings
+"------------------------------------------------
+
 filetype on
-syntax off
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set showtabline=2
-set noswapfile
-set scrolloff=3
-set statusline=%F
-set wrap
-set autoindent
-set viminfo=
-set nobackup
-set nowritebackup
-set t_vb=
-set softtabstop=4
-set smartindent
-set guioptions-=T
-set notitle
-set mouse=a
 set clipboard=unnamedplus
-nnoremap <F7> :w<CR>
-nnoremap <F6> :q<CR>
-set nobackup
-set nowritebackup
-set hlsearch
-set number
-set noswapfile
-set noerrorbells
-set tabstop=4
-set shiftwidth=4
-"set expandtab
-set softtabstop=4
-set smartindent
 set guioptions-=T
-set viminfo=
-nnoremap <F7> :w<CR>
-nnoremap <F6> :q<CR>
-" aliases
+set mouse=a
+set nobackup
+set noswapfile
+set notitle
+set nowritebackup
+set number
+set scrolloff=2
+set showtabline=2
+set statusline=%F
+set noerrorbells visualbell t_vb=
+syntax off
+set hlsearch
+
+"------------------------------------------------
+" Autocomplete Settings
+"------------------------------------------------
+
+set autoindent
+set expandtab
+set shiftwidth=2
+set smartindent
+set softtabstop=4
+set tabstop=4
+set wrap
+
+"------------------------------------------------
+" Aliases / Command Shortcuts
+"------------------------------------------------
+
 command! Svr source ~/.vimrc
-" functions
-" remove duplicates after
+nnoremap <F6> :q<CR>
+nnoremap <F7> :w<CR>
+
+"------------------------------------------------
+" Functions
+"------------------------------------------------
+
+" Remove Duplicates After
 function! RemoveDup()
     let seen = {}
     for i in range(1, line('$'))
         let current_line = getline(i)
         if has_key(seen, current_line)
-            call setline(i, "")
+            call setline(i, '')
         else
             let seen[current_line] = 1
         endif
     endfor
-    :g/^$/d
 endfunction
 noremap <leader>rd :call RemoveDup()<CR>
-" remove anything that is duplicated
+
+" Remove Anything Duplicated
 function! RemoveAllDup()
     let seen = {}
     for i in range(1, line('$'))
@@ -69,51 +70,54 @@ function! RemoveAllDup()
     for i in range(1, line('$'))
         let current_line = getline(i)
         if seen[current_line] > 1
-            call setline(i, ")
+            call setline(i, '')
         endif
     endfor
-    :g/^$/d
 endfunction
-nnoremap <leader>rd :call RemoveAllDup()<CR>
-" comment python/shell lines
+nnoremap <leader>rda :call RemoveAllDup()<CR>
+
+" Comment Python / Shell Lines
 function! Comment(start, end)
     for line_num in range(a:start, a:end)
         let line_content = getline(line_num)
         call setline(line_num, '#' . line_content)
     endfor
 endfunction
-" uncomment python/shell lines
+nnoremap <leader>c :call Comment(line("'<"), line("'>"))<CR>
+
+" Uncomment Python / Shell Lines
 function! Uncomment(start, end)
     for line_num in range(a:start, a:end)
         let line_content = getline(line_num)
-        if line_content =~ '^#'
+        if line_content =~? '^?'
             let uncommented_line = substitute(line_content, '^#', '', '')
             call setline(line_num, uncommented_line)
         endif
     endfor
 endfunction
-" tab lines
+nnoremap <leader>u :call Uncomment(line("'<"), line("'>"))<CR>
+
+" Tab Lines
 function! TabLines(start, end)
-    execute a:start . "," . a:end . "normal >>"
+    execute a:start . ',' . a:end . 'normal >>'
 endfunction
-" untab lines
+
+" Untab Lines
 function! UnTabLines(start, end)
-    execute a:start . "," . a:end . "normal <<"
+    execute a:start . ',' . a:end . 'normal <<'
 endfunction
-" configure makefiles
+
+" Configure Makefiles
 function! SetMakefileSettings()
     setlocal noexpandtab    " Use actual tabs instead of spaces
     setlocal tabstop=8      " Set tab width to 8 spaces
     setlocal shiftwidth=8   " Set shift width to 8 spaces
-    echo "Makefile settings applied"
+    echo 'Makefile settings applied'
 endfunction
-
-" Command to call the function manually
 command! MakefileSettings call SetMakefileSettings()
 
-" enable ctags
+" Enable Ctags
 function! SetTags()
     set tags=./tags;,tags
 endfunction
 command! SetTags call SetTags()
-
