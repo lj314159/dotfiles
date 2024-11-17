@@ -74,6 +74,8 @@ alias gdbinit='vim ~/.gdbinit'
 alias edircolors='vim ~/.dircolors'
 alias tmuxconf='vim ~/.tmux.conf'
 alias clangformat='vim ~/.clang-format'
+alias ctagscpp='vim ~/.ctags.cpp'
+alias ctagspy='vim ~/.ctags.py'
 
 # Custom Aliases
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
