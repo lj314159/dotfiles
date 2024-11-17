@@ -31,6 +31,9 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 # Source Bashrc
 alias sbr='source ~/.bashrc'
 
+# Dircolors Eval
+eval $(dircolors ~/.dircolors)
+
 
 
 
@@ -61,7 +64,7 @@ alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias gitconfig='vim ~/.gitconfig'
 alias gdbinit='vim ~/.gdbinit'
-alias dircolors='vim ~/.dircolors'
+alias edircolors='vim ~/.dircolors'
 alias tmuxconf='vim ~/.tmux.conf'
 alias clangformat='vim ~/.clang-format'
 
