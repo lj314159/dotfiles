@@ -15,8 +15,8 @@ fi
 PS1='\[\033[0;32m\]\W $ \[\033[0m\]'
 
 # Scroll Rate
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 50
-gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 40
+gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 
 
 # X11 Scroll Rate
@@ -33,6 +33,9 @@ alias sbr='source ~/.bashrc'
 
 # Dircolors Eval
 eval $(dircolors ~/.dircolors)
+
+# Shell Permissions
+umask 0022
 
 
 
@@ -58,6 +61,9 @@ alias cp='cp -r'
 alias rm='rm -rf'
 alias view='xdg-open'
 alias gvimt='gvim --remote-tab-silent'
+alias sau='sudo apt update'
+alias pip='sudo pip3'
+alias tmuxkill='tmux kill-session'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
@@ -86,10 +92,13 @@ alias ch2='cd /home/ubuntu/cppGame/chapter2'
 alias ch3='cd /home/ubuntu/cppGame/chapter3'
 alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
-alias dotFiles='cd ~/dotfiles/'
 alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
+
 # Root Of Repo
 alias cdRoot='cd $(git rev-parse --show-toplevel)'
+
+# Dotfiles Directory
+alias dotFiles='cd ~/dotfiles/'
 
 
 
@@ -113,6 +122,11 @@ py_shebang() {
   else
     echo "File not found: $file"
   fi
+}
+
+# Yank Path To Clipboard
+ypath() {
+    realpath "$@" | tr -d '\n' | xsel --clipboard
 }
 
 
