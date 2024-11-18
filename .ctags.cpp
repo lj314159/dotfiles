@@ -1,0 +1,6 @@
+--recurse
+--languages=C++
+--c++-kinds=+cdefglmnpstuvx
+--exclude=*.git 
+--fields=+iaS
+--tag-relative=yes

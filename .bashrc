@@ -65,6 +65,9 @@ alias sau='sudo apt update'
 alias pip='sudo pip3'
 alias tmuxkill='tmux kill-session'
 alias histview='history | less'
+alias ctagscpp='ctags --options=/home/ubuntu/.dotfiles/.ctags.cpp'
+alias ctagspy='ctags --options=/home/ubuntu/.dotfiles/.ctags.py'
+alias uctags='/snap/bin/universal-ctags'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
@@ -74,8 +77,8 @@ alias gdbinit='vim ~/.gdbinit'
 alias edircolors='vim ~/.dircolors'
 alias tmuxconf='vim ~/.tmux.conf'
 alias clangformat='vim ~/.clang-format'
-alias ctagscpp='vim ~/.ctags.cpp'
-alias ctagspy='vim ~/.ctags.py'
+alias ectagscpp='vim ~/.ctags.cpp'
+alias ectagspy='vim ~/.ctags.py'
 
 # Custom Aliases
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
@@ -132,9 +135,17 @@ ypath() {
     realpath "$@" | tr -d '\n' | xsel --clipboard
 }
 
-
-
-
+# Create Cpp Ctags
+ctags_cpp() {
+    local dir_name=$(basename "$PWD")
+    local tags_file="${dir_name}_ctags"
+    ctags --options=/home/ubuntu/.dotfiles/.ctags.cpp -f "$tags_file"
+    if [[ -f "$tags_file" ]]; then
+        echo "$tags_file"
+    else
+        echo "Failed"
+    fi
+}
 
 # ------------------------------------------------
 # Shell Scripts / Python Scripts
