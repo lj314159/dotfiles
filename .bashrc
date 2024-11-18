@@ -32,7 +32,7 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 alias sbr='source ~/.bashrc'
 
 # Dircolors Eval
-eval $(dircolors ~/.dircolors)
+eval "$(dircolors ~/.dircolors)"
 
 # Shell Permissions
 umask 0022
@@ -56,7 +56,7 @@ umask 0022
 # Overwrite Commands / Command Shortcuts
 alias clear='clear -x'
 alias cp='cp -r'
-alias grep='grep --color=auto'
+alias grep='grep --color=auto --exclude=\*.o --exclude=\*.so'
 alias gvimt='gvim --remote-tab-silent'
 alias histview='history | less'
 alias ls='ls --color=auto'
@@ -135,7 +135,7 @@ ypath() {
 
 # Create Cpp Ctags
 ctags_cpp() {
-    local dir_name=$(basename "$PWD")
+    local dir_name="$(basename "$PWD")"
     local tags_file="${dir_name}_ctags"
     ctags --options=/home/ubuntu/.ctags.cpp -f "$tags_file"
     if [[ -f "$tags_file" ]]; then
