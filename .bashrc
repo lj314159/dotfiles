@@ -132,6 +132,7 @@ py_shebang() {
 ypath() {
     realpath "$@" | tr -d '\n' | xsel --clipboard
 }
+complete -o default -o nospace -F _filedir_xspec ypath
 
 # Create Cpp Ctags
 ctags_cpp() {
