@@ -54,29 +54,29 @@ umask 0022
 # ------------------------------------------------
 
 # Overwrite Commands / Command Shortcuts
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
 alias clear='clear -x'
 alias cp='cp -r'
-alias rm='rm -rf'
-alias view='xdg-open'
+alias grep='grep --color=auto'
 alias gvimt='gvim --remote-tab-silent'
-alias sau='sudo apt update'
-alias pip='sudo pip3'
-alias tmuxkill='tmux kill-session'
 alias histview='history | less'
+alias ls='ls --color=auto'
+alias pip='sudo pip3'
+alias rm='rm -rf'
+alias sau='sudo apt update'
+alias tmuxkill='tmux kill-session'
 alias uctags='/snap/bin/universal-ctags'
+alias view='xdg-open'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
-alias vimrc='vim ~/.vimrc'
-alias gitconfig='vim ~/.gitconfig'
-alias gdbinit='vim ~/.gdbinit'
-alias edircolors='vim ~/.dircolors'
-alias tmuxconf='vim ~/.tmux.conf'
 alias clangformat='vim ~/.clang-format'
 alias ectagscpp='vim ~/.ctags.cpp'
 alias ectagspy='vim ~/.ctags.py'
+alias edircolors='vim ~/.dircolors'
+alias gdbinit='vim ~/.gdbinit'
+alias gitconfig='vim ~/.gitconfig'
+alias tmuxconf='vim ~/.tmux.conf'
+alias vimrc='vim ~/.vimrc'
 
 # Custom Aliases
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
