@@ -138,7 +138,8 @@ complete -o default -o nospace -F _filedir_xspec ypath
 ctags_cpp() {
     local dir_name="$(basename "$PWD")"
     local tags_file="${dir_name}_ctags"
-    ctags --options=/home/ubuntu/.ctags.cpp -f "$tags_file"
+    local directories=("$PWD" "$@")
+    ctags --options="$HOME"/.ctags.cpp -f "$tags_file" "${directories[@]}"
     if [[ -f "$tags_file" ]]; then
         echo "$tags_file"
     else
