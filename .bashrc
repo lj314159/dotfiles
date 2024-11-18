@@ -137,7 +137,7 @@ ypath() {
 ctags_cpp() {
     local dir_name=$(basename "$PWD")
     local tags_file="${dir_name}_ctags"
-    ctags --options=/home/ubuntu/.dotfiles/.ctags.cpp -f "$tags_file"
+    ctags --options=/home/ubuntu/.ctags.cpp -f "$tags_file"
     if [[ -f "$tags_file" ]]; then
         echo "$tags_file"
     else
