@@ -65,8 +65,6 @@ alias sau='sudo apt update'
 alias pip='sudo pip3'
 alias tmuxkill='tmux kill-session'
 alias histview='history | less'
-alias ctagscpp='ctags --options=/home/ubuntu/.dotfiles/.ctags.cpp'
-alias ctagspy='ctags --options=/home/ubuntu/.dotfiles/.ctags.py'
 alias uctags='/snap/bin/universal-ctags'
 
 # Edit Dotfiles
@@ -146,6 +144,10 @@ ctags_cpp() {
         echo "Failed"
     fi
 }
+
+
+
+
 
 # ------------------------------------------------
 # Shell Scripts / Python Scripts
