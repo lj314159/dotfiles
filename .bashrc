@@ -20,7 +20,7 @@ gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 
 
 # X11 Scroll Rate
-xset r rate 250 50
+xset r rate 200 40
 
 # Scroll Back History
 HISTSIZE=1000
@@ -30,6 +30,9 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 
 # Source Bashrc
 alias sbr='source ~/.bashrc'
+
+# Source Tmux
+alias stmux='tmux source-file ~/.tmux.conf'
 
 # Dircolors Eval
 eval "$(dircolors ~/.dircolors)"
@@ -59,6 +62,7 @@ alias cp='cp -r'
 alias grep='grep --color=auto --exclude=\*.o --exclude=\*.so'
 alias gvimt='gvim --remote-tab-silent'
 alias histview='history | less'
+alias less='less -N -i'
 alias ls='ls --color=auto'
 alias pip='sudo pip3'
 alias rm='rm -rf'
