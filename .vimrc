@@ -5,6 +5,7 @@
 filetype on
 set clipboard=unnamedplus
 set guioptions-=T
+set guioptions-=m
 set hlsearch
 set mouse=a
 set nobackup
@@ -34,12 +35,14 @@ set wrap
 " Aliases / Command Shortcuts
 "------------------------------------------------
 
+command! Nohl nohlsearch
 command! Svr source ~/.vimrc
+command! Vimrc e $MYVIMRC
+command! Ypath let @+ = expand('%:p')
 nnoremap <F6> :q<CR>
 nnoremap <F7> :w<CR>
-vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
 nnoremap <Leader>Y :.w !xsel --clipboard --input<CR><CR>
-command! Vimrc e $MYVIMRC
+vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
 
 "------------------------------------------------
 " Functions
