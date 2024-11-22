@@ -73,7 +73,7 @@ alias view='xdg-open'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
-alias clangformat='vim ~/.clang-format'
+alias eclangformat='vim ~/.clang-format'
 alias ectagscpp='vim ~/.ctags.cpp'
 alias ectagspy='vim ~/.ctags.py'
 alias edircolors='vim ~/.dircolors'
@@ -117,7 +117,7 @@ alias dotfiles='cd ~/.dotfiles/'
 # ------------------------------------------------
 
 # Clang Format
-clangFormat() {
+clang_format() {
     clang-format --style=file:"$HOME"/.clang-format "$@"
 }
 

@@ -43,6 +43,8 @@ nnoremap <F6> :q<CR>
 nnoremap <F7> :w<CR>
 nnoremap <Leader>Y :.w !xsel --clipboard --input<CR><CR>
 vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
+nnoremap <C-n> :tn<CR>
+nnoremap <C-p> :tp<CR>
 
 "------------------------------------------------
 " Functions
