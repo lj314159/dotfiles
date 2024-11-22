@@ -85,6 +85,7 @@ alias vimrc='vim ~/.vimrc'
 # Custom Aliases
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
 alias tree2='tree -L 2 -f -P "*"'
+alias findC='find . \( -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" \)'
 
 
 
@@ -100,7 +101,7 @@ alias ch2='cd /home/ubuntu/cppGame/chapter2'
 alias ch3='cd /home/ubuntu/cppGame/chapter3'
 alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
-alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
+alias curopengl='cd /home/ubuntu/openGl/camera'
 
 # Root Of Repo
 alias cdRoot='cd $(git rev-parse --show-toplevel)'
