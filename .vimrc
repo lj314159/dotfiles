@@ -3,12 +3,14 @@
 "------------------------------------------------
 
 filetype on
+filetype plugin on
 set clipboard=unnamedplus
 set guioptions-=T
 set guioptions-=m
 set hlsearch
 set mouse=a
 set nobackup
+set nocp
 set noerrorbells visualbell t_vb=
 set noswapfile
 set notitle
@@ -39,12 +41,13 @@ command! Nohl nohlsearch
 command! Svr source ~/.vimrc
 command! Vimrc e $MYVIMRC
 command! Ypath let @+ = expand('%:p')
+nnoremap <C-n> :tn<CR>
+nnoremap <C-p> :tp<CR>
 nnoremap <F6> :q<CR>
 nnoremap <F7> :w<CR>
 nnoremap <Leader>Y :.w !xsel --clipboard --input<CR><CR>
+nnoremap gd gd:nohl<CR>
 vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
-nnoremap <C-n> :tn<CR>
-nnoremap <C-p> :tp<CR>
 
 "------------------------------------------------
 " Functions
