@@ -106,7 +106,7 @@ alias curopengl='cd /home/ubuntu/openGl/coordinateSystems'
 alias cdRoot='cd $(git rev-parse --show-toplevel)'
 
 # Dotfiles Directory
-alias dotFiles='cd ~/.dotfiles/'
+alias dotfiles='cd ~/.dotfiles/'
 
 
 
