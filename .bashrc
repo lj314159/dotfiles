@@ -152,6 +152,29 @@ ctags_cpp() {
     fi
 }
 
+# Find Sources
+find_sources() {
+    local maxdepth=""
+    local path="."
+    local absolute=""
+    if [[ $1 =~ ^[0-9]+$ ]]; then
+        maxdepth="-maxdepth $1"
+        shift
+    fi
+    if [[ -d $1 ]]; then
+        path="$1"
+        shift
+    fi
+    if [[ $1 == "-a" ]]; then
+        absolute="-exec realpath {} +"
+    fi
+    if [[ -n $absolute ]]; then
+        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" \) $absolute
+    else
+        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" \)
+    fi
+}
+
 
 
 
