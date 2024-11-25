@@ -86,6 +86,7 @@ alias vimrc='vim ~/.vimrc'
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
 alias tree2='tree -L 2 -f -P "*"'
 alias findC='find . \( -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" \)'
+alias sdl2="grep -rl 'SDL/' . | xargs sed -i 's#SDL/#SDL2/#g'"
 
 
 
@@ -101,6 +102,7 @@ alias ch2='cd /home/ubuntu/cppGame/chapter2'
 alias ch3='cd /home/ubuntu/cppGame/chapter3'
 alias ch4='cd /home/ubuntu/cppGame/chapter4'
 alias ch5='cd /home/ubuntu/cppGame/chapter5'
+alias ch6='cd /home/ubuntu/cppGame/chapter6'
 alias curopengl='cd /home/ubuntu/openGl/camera'
 
 # Root Of Repo
@@ -169,9 +171,9 @@ find_sources() {
         absolute="-exec realpath {} +"
     fi
     if [[ -n $absolute ]]; then
-        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" \) $absolute
+        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" -o -name "*.fs" -o -name "*.vs" -o -name "*.frag" -o -name "*.vert" \) $absolute
     else
-        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" \)
+        find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" -o -name "*.fs" -o -name "*.vs" -o -name "*.frag" -o -name "*.vert" \)
     fi
 }
 
