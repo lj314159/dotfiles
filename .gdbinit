@@ -1,8 +1,8 @@
 handle SIGSEGV noprint nostop
 handle SIGSEGV nostop SIGSEGV noprint
+set breakpoint pending on
 set confirm on
 set demangle-style gnu-v3
-set multiple-symbols off
 set pagination off
 set print address off
 set print demangle on
