@@ -20,6 +20,11 @@ set scrolloff=2
 set showtabline=2
 set statusline=%F
 syntax off
+if has("gui_running")
+    colorscheme default
+else
+    colorscheme slate
+endif
 
 "------------------------------------------------
 " Autocomplete Settings
