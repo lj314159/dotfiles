@@ -80,6 +80,7 @@ alias ectagspy='vim ~/.ctags.py'
 alias edircolors='vim ~/.dircolors'
 alias gdbinit='vim ~/.gdbinit'
 alias gitconfig='vim ~/.gitconfig'
+alias taskrc='vim ~/.taskrc'
 alias tmuxconf='vim ~/.tmux.conf'
 alias vimrc='vim ~/.vimrc'
 
