@@ -127,11 +127,16 @@ clang_format() {
 }
 
 # Python Shebang
-py_shebang() {
+pyshebang() {
   file="$1"
   if [ -f "$file" ]; then
     # Insert the shebang at the first line
     sed -i '1i#!/usr/bin/env python3' "$file"
+
+    # Make the file executable
+    chmod +x "$file"
+
+    echo "Shebang added and $file made executable."
   else
     echo "File not found: $file"
   fi
