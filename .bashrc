@@ -108,7 +108,7 @@ alias ch6='cd /home/ubuntu/cppGame/chapter6'
 alias curopengl='cd /home/ubuntu/openGl/camera'
 
 # Root Of Repo
-alias cdRoot='cd $(git rev-parse --show-toplevel)'
+alias cdroot='cd $(git rev-parse --show-toplevel)'
 
 # Dotfiles Directory
 alias dotfiles='cd ~/.dotfiles/'
