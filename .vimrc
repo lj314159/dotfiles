@@ -46,14 +46,15 @@ command! Nohl nohlsearch
 command! Svr source ~/.vimrc
 command! Vimrc e $MYVIMRC
 command! Ypath let @+ = expand('%:p')
+inoremap <Leader>b <C-K>Sb
 nnoremap <C-n> :tn<CR>
 nnoremap <C-p> :tp<CR>
 nnoremap <F6> :q<CR>
 nnoremap <F7> :w<CR>
 nnoremap <Leader>Y :.w !xsel --clipboard --input<CR><CR>
-nnoremap gd gd:nohlsearch<CR>
-vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
+nnoremap gd gd:nohl<CR>
 nnoremap yaw viwy
+vnoremap <Leader>y :!xsel --clipboard --input<CR><CR>
 
 "------------------------------------------------
 " Functions
