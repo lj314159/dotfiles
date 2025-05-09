@@ -126,6 +126,18 @@ clang_format() {
     clang-format --style=file:"$HOME"/.clang-format "$@"
 }
 
+# Clang Format Range
+clang_fr() {
+    if [[ $# -ne 3 ]]; then
+        echo "Usage: clangFormatRange <start_line> <end_line> <file>"
+        return 1
+    fi
+    local start="$1"
+    local end="$2"
+    local file="$3"
+    clang_format -lines="${start}:${end}" -i "$file"
+}
+
 # Python Shebang
 pyshebang() {
   file="$1"
