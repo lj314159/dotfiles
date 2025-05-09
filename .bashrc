@@ -194,7 +194,7 @@ find_sources() {
 
 alias source2make='/home/ubuntu/cppGame/source2make.sh'
 alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
-
+alias crop_pdf='/home/ubuntu/cropPdf/crop_pdf.py'
 
 
 

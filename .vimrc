@@ -19,11 +19,11 @@ set number
 set scrolloff=2
 set showtabline=2
 set statusline=%F
-syntax off
+syntax on
 if has("gui_running")
     colorscheme default
 else
-    colorscheme slate
+    colorscheme default
 endif
 
 "------------------------------------------------
@@ -138,3 +138,33 @@ function! SetTags()
     set tags=./tags;,tags
 endfunction
 command! SetTags call SetTags()
+
+call plug#begin('~/.vim/plugged')
+
+" LSP support
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'  " Auto config for common servers
+
+call plug#end()
+
+" LSP navigation
+
+" Go to definition
+nmap <silent> gd <Plug>(lsp-definition)
+" Go to declaration (e.g. variable or type declaration)
+nmap <silent> gD <Plug>(lsp-declaration)
+" Go to type definition (e.g. jump to a class/struct definition)
+nmap <silent> gy <Plug>(lsp-type-definition)
+" Go to implementation (e.g. jump to overridden function body)
+nmap <silent> gi <Plug>(lsp-implementation)
+" List references (all usages of a symbol)
+nmap <silent> gr <Plug>(lsp-references)
+" Show hover information (documentation or type)
+nmap <silent> K <Plug>(lsp-hover)
+" Signature help (e.g. function arguments while typing)
+imap <silent> <C-k> <Plug>(lsp-signature-help)
+" Rename symbol
+nmap <silent> <leader>rn <Plug>(lsp-rename)
+" Show diagnostics (inline messages)
+nmap <silent> [d <Plug>(lsp-previous-diagnostic)
+nmap <silent> ]d <Plug>(lsp-next-diagnostic)
