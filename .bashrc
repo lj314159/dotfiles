@@ -65,8 +65,6 @@ alias histview='history | less'
 alias less='less -N -i'
 alias ls='ls --color=auto'
 alias man='man --pager="less -i -j3"'
-alias pip='sudo pip3'
-alias rm='rm -rf'
 alias sau='sudo apt update'
 alias tmuxkill='tmux kill-session'
 alias uctags='/snap/bin/universal-ctags'
@@ -229,3 +227,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export PATH="$HOME/.local/bin:$PATH"
