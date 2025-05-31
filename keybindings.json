@@ -1,0 +1,31 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "y",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+        "key": "p",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "p",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+        "key": "y y",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "f6",
+        "command": "workbench.action.closeActiveEditor"
+    }
+]
