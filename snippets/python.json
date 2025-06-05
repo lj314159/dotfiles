@@ -1,0 +1,31 @@
+{
+  "Inspect Docstring": {
+    "prefix": "inspectdoc",
+    "body": [
+      "import inspect",
+      "print(inspect.getdoc(${1:object}))"
+    ],
+    "description": "Print docstring of an object"
+  },
+  "Inspect Signature": {
+    "prefix": "inspectsig",
+    "body": [
+      "import inspect",
+      "print(inspect.signature(${1:object}))"
+    ],
+    "description": "Print signature of an object"
+  },
+  "Inspect Both": {
+    "prefix": "inspectinfo",
+    "body": [
+      "import inspect",
+      "",
+      "print(\"Signature of ${1:object}:\")",
+      "print(inspect.signature(${1:object}))",
+      "",
+      "print(\"\\nDocstring of ${1:object}:\")",
+      "print(inspect.getdoc(${1:object}))"
+    ],
+    "description": "Print both signature and docstring of an object"
+  }
+}
