@@ -3,7 +3,7 @@
 [alias]
     am = commit --amend --no-edit
     pom = pull origin main
-    pretty = log --author='vagrant' --pretty=oneline --no-merges --oneline
+    pretty = log --author='Layne Jones' --pretty=oneline --no-merges --oneline
     rebase-root = "!git rebase -i $(git rev-list --max-parents=0 HEAD)"
     root = rev-parse --show-toplevel
     s = status -s
