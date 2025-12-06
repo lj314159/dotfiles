@@ -40,7 +40,6 @@ eval "$(dircolors ~/.dircolors)"
 # Shell Permissions
 umask 0022
 
-export ALPHAVANTAGE_API_KEY="CSZI5643EMC4J3IC"
 
 
 
@@ -48,6 +47,10 @@ export ALPHAVANTAGE_API_KEY="CSZI5643EMC4J3IC"
 # ------------------------------------------------
 # Environment Variables
 # ------------------------------------------------
+# load secret environment variables
+if [ -f "$HOME/.bash_env" ]; then
+    source "$HOME/.bash_env"
+fi
 
 
 

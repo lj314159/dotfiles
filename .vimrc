@@ -5,6 +5,7 @@
 filetype on
 filetype plugin on
 set clipboard=unnamedplus
+set guifont=Monospace\ 12
 set guioptions-=T
 set guioptions-=m
 set hlsearch
@@ -13,7 +14,6 @@ set nobackup
 set nocp
 set noerrorbells visualbell t_vb=
 set noswapfile
-set guifont=Monospace\ 12
 set notitle
 set nowritebackup
 set number
