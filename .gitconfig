@@ -2,7 +2,6 @@
     email = jones.layne555@gmail.com
 [alias]
     am = commit --amend --no-edit
-    bbdiff = "!/home/vagrant/projects/bitbucketDiff/git-bitbucket-diff.sh"
     pom = pull origin main
     pretty = log --author='Layne Jones' --pretty=oneline --no-merges --oneline
     rebase-root = "!git rebase -i $(git rev-list --max-parents=0 HEAD)"
