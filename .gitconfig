@@ -4,7 +4,7 @@
     am = commit --amend --no-edit
     bbdiff = "!/home/vagrant/projects/bitbucketDiff/git-bitbucket-diff.sh"
     pom = pull origin main
-    pretty = log --author='vagrant' --pretty=oneline --no-merges --oneline
+    pretty = log --author='Layne Jones' --pretty=oneline --no-merges --oneline
     rebase-root = "!git rebase -i $(git rev-list --max-parents=0 HEAD)"
     root = rev-parse --show-toplevel
     s = status -s
@@ -13,3 +13,5 @@
     whitespace = -trailing-space
 [pull]
     ff = true
+[credential]
+	helper = store

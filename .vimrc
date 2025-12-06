@@ -13,6 +13,7 @@ set nobackup
 set nocp
 set noerrorbells visualbell t_vb=
 set noswapfile
+set guifont=Monospace\ 12
 set notitle
 set nowritebackup
 set number
@@ -32,10 +33,10 @@ endif
 
 set autoindent
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smartindent
-set softtabstop=4
-set tabstop=4
+set softtabstop=2
+set tabstop=2
 set wrap
 
 "------------------------------------------------
@@ -140,32 +141,3 @@ function! SetTags()
 endfunction
 command! SetTags call SetTags()
 
-call plug#begin('~/.vim/plugged')
-
-" LSP support
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'  " Auto config for common servers
-
-call plug#end()
-
-" LSP navigation
-
-" Go to definition
-nmap <silent> gd <Plug>(lsp-definition)
-" Go to declaration (e.g. variable or type declaration)
-nmap <silent> gD <Plug>(lsp-declaration)
-" Go to type definition (e.g. jump to a class/struct definition)
-nmap <silent> gy <Plug>(lsp-type-definition)
-" Go to implementation (e.g. jump to overridden function body)
-nmap <silent> gi <Plug>(lsp-implementation)
-" List references (all usages of a symbol)
-nmap <silent> gr <Plug>(lsp-references)
-" Show hover information (documentation or type)
-nmap <silent> K <Plug>(lsp-hover)
-" Signature help (e.g. function arguments while typing)
-imap <silent> <C-k> <Plug>(lsp-signature-help)
-" Rename symbol
-nmap <silent> <leader>rn <Plug>(lsp-rename)
-" Show diagnostics (inline messages)
-nmap <silent> [d <Plug>(lsp-previous-diagnostic)
-nmap <silent> ]d <Plug>(lsp-next-diagnostic)

@@ -40,6 +40,7 @@ eval "$(dircolors ~/.dircolors)"
 # Shell Permissions
 umask 0022
 
+export ALPHAVANTAGE_API_KEY="CSZI5643EMC4J3IC"
 
 
 
@@ -192,6 +193,18 @@ find_sources() {
     else
         find "$path" $maxdepth -type f \( -name "*.c" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.C" -o -name "*.H" -o -name "*.fs" -o -name "*.vs" -o -name "*.frag" -o -name "*.vert" \)
     fi
+}
+
+find_replace() {
+    if [ $# -ne 2 ]; then
+        echo "Usage: find_replace <find_text> <replace_text>"
+        return 1
+    fi
+    local find_text="$1"
+    local replace_text="$2"
+    find_sources \
+        | xargs grep -rl "$find_text" \
+        | xargs sed -i "s/$find_text/$replace_text/g"
 }
 
 
