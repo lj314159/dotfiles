@@ -1,7 +1,7 @@
 [user]
     email = jones.layne555@gmail.com
 [alias]
-    am = commit --amend --no-edit
+    amend = commit --amend --no-edit
     pom = pull origin main
     pretty = log --author='Layne Jones' --pretty=oneline --no-merges --oneline
     rebase-root = "!git rebase -i $(git rev-list --max-parents=0 HEAD)"
