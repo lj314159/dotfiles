@@ -51,7 +51,10 @@ umask 0022
 if [ -f "$HOME/.bash_env" ]; then
     source "$HOME/.bash_env"
 fi
-
+# Vimrc
+export VIMINIT='source /home/vagrant/.dotfiles/.vimrc'
+# Gitconfig
+export GIT_CONFIG_GLOBAL='/home/vagrant/.dotfiles/.gitconfig'
 
 
 
@@ -72,7 +75,6 @@ alias man='man --pager="less -i -j3"'
 alias sau='sudo apt update'
 alias tmuxkill='tmux kill-session'
 alias uctags='/snap/bin/universal-ctags'
-alias view='xdg-open'
 
 # Edit Dotfiles
 alias bashrc='vim ~/.bashrc'
@@ -91,7 +93,7 @@ alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmu
 alias tree2='tree -L 2 -f -P "*"'
 alias findC='find . \( -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" \)'
 alias sdl2="grep -rl 'SDL/' . | xargs sed -i 's#SDL/#SDL2/#g'"
-
+alias rls=''
 
 
 
@@ -125,7 +127,7 @@ alias dotfiles='cd ~/.dotfiles/'
 
 # Clang Format
 clang_format() {
-    clang-format --style=file:"$HOME"/.clang-format "$@"
+  clang-format -style=file -assume-filename="$HOME"/.clang-format "$@"
 }
 
 # Clang Format Range
@@ -228,6 +230,43 @@ clangBuild() {
         -lclang \
         -Wl,-rpath,/home/vagrant/miniforge3/lib \
         -o "$OUT"
+}
+
+# json format jq
+jq_format() {
+  if [[ -f "$1" ]];then
+    tmpfile=$(mktemp) || return 1
+    if jq . "$1" > "$tmpfile"; then
+      mv "$tmpfile" "$1"
+    else
+      echo "jq failed: invalid JSON"
+      rm -f "$tmpfile"
+      return 1
+    fi
+  else
+    echo "File not found: $1"
+    return 1
+  fi
+}
+
+view() {
+  xdg-open "$1" >/dev/null 2>&1 &
+}
+
+keep_theirs() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: keep_theirs <file1> [<file2> ...]"
+    return 1
+  fi
+  for file in "$@"; do
+    if [ ! -f "$file" ]; then
+      echo "Skipping: $file (not a file)"
+      continue
+    fi
+    local tmp="${file}.tmp"
+    perl -0777 -pe 's/<<<<<<<.*?=======(.*?)>>>>>>>.*?\n/\1/gs' "$file" > "$tmp" && mv "$tmp" "$file"
+    echo "Resolved: $file"
+  done
 }
 
 
