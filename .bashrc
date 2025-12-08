@@ -197,6 +197,10 @@ find_sources() {
     fi
 }
 
+pipNoProxy() {
+    pip install --index-url=https://pypi.org/simple --timeout=100 --retries=10 "$@"
+}
+
 find_replace() {
     if [ $# -ne 2 ]; then
         echo "Usage: find_replace <find_text> <replace_text>"
@@ -209,6 +213,22 @@ find_replace() {
         | xargs sed -i "s/$find_text/$replace_text/g"
 }
 
+clangBuild() {
+    if [ "$#" -lt 2 ]; then
+        echo "Usage: clangBuild <output_file> <source1.cpp> [source2.cpp ...]"
+        return 1
+    fi
+
+    local OUT="$1"
+    shift  # remove the first argument (output file name)
+
+    g++ -std=c++17 "$@" \
+        -I/home/vagrant/miniforge3/include \
+        -L/home/vagrant/miniforge3/lib \
+        -lclang \
+        -Wl,-rpath,/home/vagrant/miniforge3/lib \
+        -o "$OUT"
+}
 
 
 
