@@ -3,7 +3,7 @@
 "------------------------------------------------
 
 filetype on
-filetype plugin on
+filetype plugin indent on
 set clipboard=unnamedplus
 set guifont=Monospace\ 12
 set guioptions-=T
@@ -38,6 +38,9 @@ set smartindent
 set softtabstop=2
 set tabstop=2
 set wrap
+" Better Bash indentation
+let g:sh_indent_after_paren = 0
+let g:sh_noisk = 1
 
 "------------------------------------------------
 " Aliases / Command Shortcuts
