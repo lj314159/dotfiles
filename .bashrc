@@ -270,7 +270,8 @@ keep_theirs() {
   done
 }
 
-nvimqt() {
+# Neovim Gui
+nvg() {
     QT_QPA_PLATFORM=wayland \
     QT_LOGGING_RULES="*=false" \
     nvim-qt "$@" 2>/dev/null
