@@ -52,7 +52,7 @@ if [ -f "$HOME/.bash_env" ]; then
     source "$HOME/.bash_env"
 fi
 # Vimrc
-export VIMINIT='source /home/vagrant/.dotfiles/.vimrc'
+# export VIMINIT='source /home/vagrant/.dotfiles/.vimrc'
 # Gitconfig
 export GIT_CONFIG_GLOBAL='/home/vagrant/.dotfiles/.gitconfig'
 
@@ -77,16 +77,17 @@ alias tmuxkill='tmux kill-session'
 alias uctags='/snap/bin/universal-ctags'
 
 # Edit Dotfiles
-alias bashrc='vim ~/.bashrc'
-alias eclangformat='vim ~/.clang-format'
-alias ectagscpp='vim ~/.ctags.cpp'
-alias ectagspy='vim ~/.ctags.py'
-alias edircolors='vim ~/.dircolors'
-alias gdbinit='vim ~/.gdbinit'
-alias gitconfig='vim ~/.gitconfig'
-alias taskrc='vim ~/.taskrc'
-alias tmuxconf='vim ~/.tmux.conf'
-alias vimrc='vim ~/.vimrc'
+alias bashrc='nvim ~/.bashrc'
+alias clangformat='nvim ~/.clang-format'
+alias ectagscpp='nvim ~/.ctags.cpp'
+alias ectagspy='nvim ~/.ctags.py'
+alias edircolors='nvim ~/.dircolors'
+alias gdbinit='nvim ~/.gdbinit'
+alias gitconfig='nvim ~/.gitconfig'
+alias nviminit='nvim ~/.dotfiles/nvim/init.lua'
+alias taskrc='nvim ~/.taskrc'
+alias tmuxconf='nvim ~/.tmux.conf'
+alias vimrc='nvim ~/.vimrc'
 
 # Custom Aliases
 alias cpdot='cp ~/.tcshrc ~/.bashrc ~/.vimrc ~/.gitconfig ~/.clang-format ~/.tmux.conf ~/.dircolors ~/.dotfiles/'
@@ -268,6 +269,13 @@ keep_theirs() {
     echo "Resolved: $file"
   done
 }
+
+nvimqt() {
+    QT_QPA_PLATFORM=wayland \
+    QT_LOGGING_RULES="*=false" \
+    nvim-qt "$@" 2>/dev/null
+}
+
 
 
 
