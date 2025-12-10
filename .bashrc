@@ -270,11 +270,19 @@ keep_theirs() {
   done
 }
 
-# Neovim Gui
+# Neovim GUI launcher with automatic window sizing
 nvg() {
+    export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
     QT_QPA_PLATFORM=wayland \
     QT_LOGGING_RULES="*=false" \
-    nvim-qt "$@" 2>/dev/null
+    nvim-qt -- --listen "$NVIM_LISTEN_ADDRESS" "$@" 2>/dev/null &
+}
+
+# Open file in an existing nvim-qt tab (silent)
+nvgt() {
+    export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+    nvr --servername "$NVIM_LISTEN_ADDRESS" --remote-tab "$@" >/dev/null 2>&1
 }
 
 
