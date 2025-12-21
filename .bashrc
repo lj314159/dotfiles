@@ -54,7 +54,7 @@ fi
 # Vimrc
 # export VIMINIT='source /home/vagrant/.dotfiles/.vimrc'
 # Gitconfig
-export GIT_CONFIG_GLOBAL='/home/vagrant/.dotfiles/.gitconfig'
+#export GIT_CONFIG_GLOBAL='/home/vagrant/.dotfiles/.gitconfig'
 
 
 
@@ -104,13 +104,13 @@ alias rls=''
 # ------------------------------------------------
 
 # Game Chapters
-alias ch1='cd /home/ubuntu/cppGame/chapter1'
-alias ch2='cd /home/ubuntu/cppGame/chapter2'
-alias ch3='cd /home/ubuntu/cppGame/chapter3'
-alias ch4='cd /home/ubuntu/cppGame/chapter4'
-alias ch5='cd /home/ubuntu/cppGame/chapter5'
-alias ch6='cd /home/ubuntu/cppGame/chapter6'
-alias curopengl='cd /home/ubuntu/openGl/camera'
+alias ch1='cd /home/layne/cppGame/chapter1'
+alias ch2='cd /home/layne/cppGame/chapter2'
+alias ch3='cd /home/layne/cppGame/chapter3'
+alias ch4='cd /home/layne/cppGame/chapter4'
+alias ch5='cd /home/layne/cppGame/chapter5'
+alias ch6='cd /home/layne/cppGame/chapter6'
+alias curopengl='cd /home/layne/openGl/camera'
 
 # Root Of Repo
 alias cdroot='cd $(git rev-parse --show-toplevel)'
@@ -293,9 +293,9 @@ nvgt() {
 # Shell Scripts / Python Scripts
 # ------------------------------------------------
 
-alias source2make='/home/ubuntu/cppGame/source2make.sh'
-alias sdl2='/home/ubuntu/cppGame/sdl2.sh'
-alias crop_pdf='/home/ubuntu/cropPdf/crop_pdf.py'
+alias source2make='/home/layne/cppGame/source2make.sh'
+alias sdl2='/home/layne/cppGame/sdl2.sh'
+alias crop_pdf='/home/layne/cropPdf/crop_pdf.py'
 
 
 
@@ -304,18 +304,3 @@ alias crop_pdf='/home/ubuntu/cropPdf/crop_pdf.py'
 # Conda
 # ------------------------------------------------
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ubuntu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ubuntu/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ubuntu/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ubuntu/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-export PATH="$HOME/.local/bin:$PATH"
